@@ -15,11 +15,35 @@
             }
             }
         </script>
+        <style>
+            .content{
+                background-image: url("bg.jpg");
+                background-size:cover;
+                margin: auto;
+                width: 50%;
+                height: 50%;
+                padding: 10px;
+                height: 200px;
+                width: 400px;
+                margin-top: 15%;
+                font-family:Arial;
+                font-size:25px;
+                color: white;
+                text-shadow: 0 0 5px black;
+            }
+        </style>
     </head>
-    <body>
-        <form name="geheim">
-            Passwort: <input type="text" name="pass" />
-            <input type="button" value="Zur Seite!" onclick="passwort(this.form)" />
+    <body class="content">
+        <form name="geheim" style="background-color:#0067c7;padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:10px;">
+            <p>
+                Passwort :
+            </p>
+            <p>
+            <input type="text" name="pass" style="height: 26px;width: 254px;"/>
+            </p>
+            <p>
+            <input type="button" value="Zur Seite!" onclick="passwort(this.form)" style="margin-left:265px;margin-top:10px;"/>
+            </p>
             </form>
     </body>
 </html>
