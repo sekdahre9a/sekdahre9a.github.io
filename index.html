@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Passwortabfrage</title>
+        <script>
+            function vergleiche(a, b) {
+            return (a == b) ? true : false;
+            }
+            function passwort(form) {
+            if(vergleiche("Jd/2f", form.pass.value)) 
+            window.open("haupt.html")
+            else {
+            alert("das Passwort ist falsch!");
+            form.pass.select();
+            form.pass.focus();
+            }
+            }
+        </script>
+    </head>
+    <body>
+        <form name="geheim">
+            Passwort: <input type="text" name="pass" />
+            <input type="button" value="Zur Seite!" onclick="passwort(this.form)" />
+            </form>
+    </body>
+</html>
