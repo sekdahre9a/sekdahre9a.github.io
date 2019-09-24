@@ -1,87 +1,240 @@
-<html class="html">
+<!--
+CSS :
+content : ganzer body
+uberschrift : Überschrift
+menu : Menü
+hapt : Über die Klasse
+haus : Hausaufgaben
+    table.center : Tabelle centrieren
+sons : Sonstiges 
+footmenu : Footermenü
+-->
+
+
+
+<html>
     <head>
-        <title>Klasse 9a Sekundarschule Dähre</title>
+        <title>Homepage der Klasse 9a</title>
         <script>
-        
-        
+            $(function() {
+            $('a[href*=#]').on('click', function(e) {
+                e.preventDefault();
+                $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+            });
+            });
         </script>
         <style>
-            .header {
-                background-color: #0067c7;
-                font-family: Arial;
-                font-size: 80px;
+            .content {
+                margin: 0px;
+                background-image: url("schulegrau.png");
+                background-size: cover;
+                font-family: Helvetica;
+            }
+            .uberschrift {
+
+                color: #40a3ff;
+                height: 250px;
+                font-size: 83px;
                 text-align: center;
-                height: 180px;
-                text-shadow: 0 0 5px black;
+                padding-top: 1px;
             }
             .menu {
-                background-color: #0067c7;
-                font-family: Arial;
-                font-size: 34px;
+                height: 6%;
+
+                color: #f0f0f0;
                 text-align: center;
-                text-shadow: 0 0 5px black;
+                font-size:x-large;
             }
-            .content {
-                background-image: url("bgbl.jpg");
-                background-size:cover;
-                color:white;
-                text-shadow: 0 0 5px black;
+            .haupt {
+                background-color: hsla(209,100%,63%,0.8);
+                height: 380px;
+                color: #3b3b3b;
+            }
+            .haus {
+                height: 95%;
+                color: #40a3ff;
+                padding-top:45px;
+            }
+            table.center {
+                margin-left:auto; 
+                margin-right:auto;
+                width: 50%;
+                height: 80%;
+            }
+
+            section::after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: '';
+                width: 100%;
+                height: 0px;
+            }
+            section {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                }
+            .stund {
+                background-color: hsla(209,100%,63%,0.8);
+                height: 100%
+            }
+            
+            .sons {
+                background-color: hsla(209,100%,63%,0.8);
+                margin:0px;
+            }
+
+            .footermenu {
+                font-size: 24px;
+                padding-top:550px;
             }
         </style>
     </head>
-    <body style="    margin-top: 0px;margin-left: 0px;margin-right: 0px;margin-bottom: 0px;">
-        <div class="header">
-            <p style="color:white;padding:40px;">
-            Klasse 9a der Sekundarschule Dähre
-            </p>    
+    <body class="content">
+        <div class="uberschrift">
+            <p>
+            Homepage der Klasse 9a
+            </p>
         </div>
         <div class="menu">
-            <p style="margin-top: 0px;margin-bottom:0px;padding-bottom:30px;">
-                <a style="color:white;padding-left:30px;padding-right:30px;" href="haupt.html">Home</a>
-                <a style="color:white;padding-left:30px;padding-right:30px;" href="stundenplan.html">Stundenplan</a>
-                <a style="color:white;padding-left:30px;padding-right:30px;" href="vertretungsplan.html">Vertretungsplan</a>
-                <a style="color:white;padding-left:30px;padding-right:30px;" href="hausaufgaben.html">Hausaufgaben</a>
-                <a style="color:white;padding-left:30px;padding-right:30px;" href="sonstiges.html">Sonstiges</a>
-            </p>
+            <a href="#top" style="padding-left:2%;padding-right:2%;color:#f0f0f0;"><span></span>Home</a>
+            <a href="#haus" style="padding-left:2%;padding-right:2%;color:#f0f0f0;"><span></span>Hausaufgaben</a>
+            <a href="#stund" style="padding-left:2%;padding-right:2%;color:#f0f0f0;"><span></span>Stundenplan</a>
+            <a href="#vert" style="padding-left:2%;padding-right:2%;color:#f0f0f0;"><span></span>Vertretungsplan</a>
+            <a href="#sons" style="padding-left:2%;padding-right:2%;color:#f0f0f0;"><span></span>Sonstiges</a>
         </div>
-        <div class="content">
-            <p style="font-family:arial;font-size:35px;padding-left:50px;margin-top:0px;padding-top:30px;">
-                Über die Klasse
-            </p>
-            <p style="font-family:arial;font-size:30px;padding-left:80px;">
-                    Klassensprecher: -
-            </p>
-            <p style="font-family:arial;font-size:30px;padding-left:80px;">
-                    Vertretung : -
-            </p>
-            <p style="font-family:arial;font-size:30px;padding-left:80px;">
-                    Schüleranzahl: 17
-            </p>
-            <p style="font-family:arial;font-size:30px;padding-left:80px;">
-                    Klassenlehrerin: -
-            </p>
+        <div class="haupt">
+            <p style="padding-left:80px;padding-top:50px;margin:0px;font-size:43px;">Über die Klasse</p>
+            <p style="padding-left:140px;padding-top:30px;margin:0px;font-size:35px;">Klassensprecher: Robert, Larissa</p>
+            <p style="padding-left:140px;padding-top:30px;margin:0px;font-size:35px;">Schüleranzahl: 17</p>
+            <p style="padding-left:140px;padding-top:30px;margin:0px;font-size:35px;padding-bottom:50px;">Klassenlehrerin: Frau Herting</p>
+                <section id="haus" style="height: 350px;">
+                <div class="haus" style="text-align:center;">
+                        <u style="font-size:35px;">Hausaufgaben</u>
+                        <table style="color:#40a3ff;align:center;font-size:xx-large;text-align:center;padding-top:50px;" class="center">
+                                <tbody>
+                                <tr>
+                                    <td>Fach &nbsp</td>
+                                    <td>Montag &nbsp</td>
+                                    <td>Dienstag &nbsp</td>
+                                    <td>Mittwoch &nbsp</td>
+                                    <td>Donnerstag &nbsp</td>
+                                    <td>Freitag &nbsp</td>
+                                </tr>
+                                <tr>
+                                    <td>Mathe</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>S. 19 Nr. 8 a, b</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                <tr>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                                </tbody>
+                        </table>
+                </div>
+                </section>
+                <section id="stund" style="height: 550px;">
+                    <div class="stund" style="padding-top:50px;padding-bottom:50px;text-align:center;">
+                            <u style="font-size:35px;">Stundenplan</u>
+                            <table style="color:#3b3b3b;align:center;font-size:xx-large;text-align:center;padding-top:50px;height:500px;" class="center">
+                                    <tbody>
+                                    <tr>
+                                        <td><u>Montag</u></td>
+                                        <td><u>Dienstag</u></td>
+                                        <td><u>Mittwoch</u></td>
+                                        <td><u>Donnerstag</u></td>
+                                        <td><u>Freitag</u></td>
+                                    </tr>
+                                    <tr>
+                                                <td>Deutsch</td>
+                                                <td>Physik</td>
+                                                <td>Technik/</td>
+                                                <td>Mathe</td>
+                                                <td>Englisch</td>
+                                    </tr>
+                                    <tr>
+                                                <td>Deutsch</td>
+                                                <td>Physik</td>
+                                                <td>Hauswirtschaft</td>
+                                                <td>Mathe</td>
+                                                <td>Musik</td>
+                                    </tr>
+                                    <tr>
+                                                <td>Klassenleiter</td>
+                                                <td>Chemie</td>
+                                                <td>Englisch</td>
+                                                <td>Sozialkunde</td>
+                                                <td>Sport</td>
+                                    </tr>
+                                    <tr>
+                                                <td>Geschichte</td>
+                                                <td>Chemie</td>
+                                                <td>Englisch</td>
+                                                <td>Wirtschaft</td>
+                                                <td>Sport</td>
+                                    </tr>
+                                    <tr>
+                                                <td>Geographie</td>
+                                                <td>Mathe</td>
+                                                <td>-</td>
+                                                <td>Biologie</td>
+                                                <td>Deutsch</td>
+                                    </tr>
+                                    <tr>
+                                                <td>Deutsch</td>
+                                                <td>Mathe</td>
+                                                <td>-</td>
+                                                <td>Biologie</td>
+                                                <td>Deutsch</td>
+                                    </tr>
+                                    </tbody>
+                            </table>
+                    </div>
+                </section>
+                <section id="vert">
+                        <div class="vert" style="padding-top:130px;text-align:center;">
+                                <u style="font-size:35px;color:#40a3ff">Vertretungsplan</u>
+                                <table style="color:#40a3ff;align:center;font-size:xx-large;text-align:center;padding-top:50px;" class="center">
+                                        <tbody>
+                                        <tr>
+                                            <td>Stunde</td>
+                                            <td>Anstatt </td>
+                                            <td>Haben wir </td>
+                                        </tr>
+                                        <tr>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
 
-            <p style="font-family:arial;font-size:35px;padding-left:50px;">
-                    Dienste
-                </p>
-                <p style="font-family:arial;font-size:30px;padding-left:80px;">
-                        Polyluxdienst : 
-                </p>
-                <p style="font-family:arial;font-size:30px;padding-left:80px;">
-                        Kartendienst : 
-                </p>
-                <p style="font-family:arial;font-size:30px;padding-left:80px;">
-                        Blumendienst : 
-                </p>
-                <p style="font-family:arial;font-size:30px;padding-left:80px;">
-                        Ordnungsdienst : 
-                </p>
-                <p style="font-family:arial;font-size:30px;padding-left:80px;">
-                        Austeildienst : 
-                </p>
-                <p style="font-family:arial;font-size:30px;padding-left:80px;">
-                        &nbsp;
-                </p>
-        </div>
+                                        </tr>
+                                        <tr>
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>-</td>
+                                        </tr>
+                                        </tbody>
+                                </table>
+                        </div>
+                        </section>
+                <section id="sons" style="padding-top:110px;">
+                    <div class="sons" style="height: 370px;">
+                            <p style="padding-left:80px;padding-top:50px;margin:0px;font-size:43px;">Sonstiges : </p>
+                            <p style="padding-left:80px;padding-top:30px;margin:0px;font-size:43px;">- Mathe Quatrathwurzeln lernen</p>
+                    </div>
+                </section>
+                <div class="footmenu" style="text-align:center;background-color: black;">
+                        <a href="dienste.html" style="padding-left:2%;padding-right:2%;color:#f0f0f0;"><span></span>Dienste (Bald verfügbar)</a>
+                        <a href="infos.html" style="padding-left:2%;padding-right:2%;color:#f0f0f0;"><span></span>Infos/Kontakt (Bald verfügbar)</a>
+                </div>
+            </div>
     </body>
 </html>
