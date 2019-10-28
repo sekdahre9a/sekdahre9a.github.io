@@ -1,7 +1,81 @@
+<!doctype html>
 <html>
-    <head>
-        <title>Passwortabfrage</title>
-        <script>
+	<head>
+		<meta charset="utf-8">
+		<title>Homepage der Klasse 9a</title>
+		<style>
+			.body {
+				background-color:#21262e;
+				color:white;
+			}
+			.alles {
+				font-family:Helvetica;
+				text-align: center;
+			}
+			.kasten {
+				background-color: hsla(192,0%,0%,0.5);
+				height: 25%;
+				width: 25%;
+				font-size: 48px;
+				padding-top:20px;
+				padding-bottom:30px;
+				margin-left: auto;
+				margin-right: auto;
+				width: 30%;
+				border-radius: 20px;
+			}
+			.pas {
+			  display: inline-block;
+			  -webkit-box-sizing: content-box;
+			  -moz-box-sizing: content-box;
+			  box-sizing: content-box;
+			  padding: 18px 25px;
+			  border: 1px solid #b7b7b7;
+			  -webkit-border-radius: 28px;
+			  border-radius: 28px;
+			  font: normal 16px/normal "Times New Roman", Times, serif;
+			  color: rgba(0,142,198,1);
+			  -o-text-overflow: clip;
+			  text-overflow: clip;
+			  background: rgb(0, 0, 0);
+			  -webkit-box-shadow: 0 0 0 4px rgba(0,255,55,0.5) ;
+			  box-shadow: 0 0 0 4px rgba(0,255,55,0.5) ;
+			  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+			  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+			  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+			  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+			  height:26px;
+			  width: 50%;
+			  font-family:Helvetica;
+			  color:rgba(0,255,55,0.25);
+			  text-align:center;
+			}
+			.bton {
+				  display: inline-block;
+				  -webkit-box-sizing: content-box;
+				  -moz-box-sizing: content-box;
+				  box-sizing: content-box;
+				  cursor: pointer;
+				  padding: 15px 35px;
+				  border: 1px solid #018dc4;
+				  -webkit-border-radius: 3px;
+				  border-radius: 3px;
+				  font: normal 16px/normal "Times New Roman", Times, serif;
+				  color: rgba(255,255,255,0.9);
+				  -o-text-overflow: clip;
+				  text-overflow: clip;
+				  background: #0f141c;
+				  -webkit-box-shadow: 0 0 0 4px rgba(0,255,55,0.5) ;
+				  box-shadow: 0 0 0 4px rgba(0,255,55,0.5) ;
+				  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+				  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+				  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+				  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+				  font-family:Helvetica;
+			}
+		</style>
+		<script>
+		
             function vergleiche(a, b) {
             return (a == b) ? true : false;
             }
@@ -14,36 +88,23 @@
             form.pass.focus();
             }
             }
-        </script>
-        <style>
-            .content{
-                background-image: url("bg.jpg");
-                background-size:cover;
-                margin: auto;
-                width: 50%;
-                height: 50%;
-                padding: 10px;
-                height: 200px;
-                width: 400px;
-                margin-top: 15%;
-                font-family:Arial;
-                font-size:25px;
-                color: white;
-                text-shadow: 0 0 5px black;
-            }
-        </style>
-    </head>
-    <body class="content" style="background-image:url(schulegrau.png);">
-        <form name="geheim" style="background-color: hsla(192,0%,0%,0.5);padding-top:20px;padding-left:20px;padding-right:20px;padding-bottom:10px;">
-            <p>
-                Passwort :
-            </p>
-            <p>
-            <input type="password" name="pass" style="height: 26px;width: 254px;"/>
-            </p>
-            <p>
-            <input type="button" value="Zur Seite!" onclick="passwort(this.form)" style="margin-left:265px;margin-top:10px;"/>
-            </p>
-            </form>
-    </body>
+        
+		</script>
+	</head>
+	<body class="body">
+		<div class="alles">
+			<p style="font-size:66px;">Homepage der Klasse 9a</p>
+				<div class="kasten">
+					<p>Login</p>
+					<form name="geheim">
+					<p>
+					<input class="pas" type="text" name="pass" value="Passwort">
+					</p>
+					<p>
+					<input type="button" class="bton" value="Weiter" onclick="passwort(this.form)">
+					</p>
+					</form>
+				</div>
+		</div>
+	</body>
 </html>
